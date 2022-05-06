@@ -1,4 +1,6 @@
 # curl 
+https://www.baeldung.com/curl-rest
+
 curl -v http://localhost:8082/spring-rest/foos/9
 curl -d 'id=9&name=baeldung' http://localhost:8082/spring-rest/foos/new
 curl -d @request.json -H "Content-Type: application/json" 
