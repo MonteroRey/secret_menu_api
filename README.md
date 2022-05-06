@@ -1,24 +1,18 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# curl 
+curl -v http://localhost:8082/spring-rest/foos/9
+curl -d 'id=9&name=baeldung' http://localhost:8082/spring-rest/foos/new
+curl -d @request.json -H "Content-Type: application/json" 
+  http://localhost:8082/spring-rest/foos/new
+curl -d '{"id":9,"name":"baeldung"}' -H 'Content-Type: application/json' 
+  http://localhost:8082/spring-rest/foos/new  
+curl -d "{\"id\":9,\"name\":\"baeldung\"}" -H "Content-Type: application/json" 
+  http://localhost:8082/spring-rest/foos/new
+curl -d @request.json -H 'Content-Type: application/json' 
+  -X PUT http://localhost:8082/spring-rest/foos/9
+curl -X DELETE http://localhost:8082/spring-rest/foos/9
+curl -H "Host: com.baeldung" http://example.com/
+curl -H "User-Agent:" http://example.com/
+curl -d @request.json -H "Content-Type: application/json" 
+  -H "Accept: application/json" http://localhost:8082/spring-rest/foos/new      
+curl --user baeldung:secretPassword http://example.com/  
+curl -H "Authorization: Bearer b1094abc0-54a4-3eab-7213-877142c33fh3" http://example.com/
